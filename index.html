@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#19191e",
+                        "tertiary-container": "#00eefc",
+                        "primary-fixed": "#ed69ff",
+                        "error-dim": "#d73357",
+                        "on-primary": "#540061",
+                        "tertiary-fixed": "#00eefc",
+                        "outline": "#76757a",
+                        "secondary": "#ac89ff",
+                        "on-surface": "#f3eff6",
+                        "on-tertiary-fixed-variant": "#005e64",
+                        "on-background": "#f3eff6",
+                        "primary": "#f382ff",
+                        "on-primary-fixed-variant": "#51005d",
+                        "on-surface-variant": "#acaab0",
+                        "outline-variant": "#48474c",
+                        "inverse-on-surface": "#555459",
+                        "surface-dim": "#0e0e12",
+                        "on-tertiary-fixed": "#003f43",
+                        "surface-container-lowest": "#000000",
+                        "background": "#0e0e12",
+                        "surface-container-high": "#1f1f25",
+                        "on-error-container": "#ffb2b9",
+                        "on-secondary-container": "#f8f1ff",
+                        "inverse-primary": "#a300bb",
+                        "tertiary-dim": "#00deec",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed": "#41009a",
+                        "primary-dim": "#ec63ff",
+                        "secondary-dim": "#874cff",
+                        "secondary-container": "#7000ff",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "surface-bright": "#2c2b32",
+                        "on-tertiary-container": "#005359",
+                        "surface-variant": "#25252b",
+                        "on-primary-container": "#41004c",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "surface-container-highest": "#25252b",
+                        "on-secondary": "#290067",
+                        "primary-container": "#ed69ff",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary": "#005d63",
+                        "inverse-surface": "#fcf8fe",
+                        "secondary-fixed": "#dac9ff",
+                        "tertiary-fixed-dim": "#00deec",
+                        "surface-tint": "#f382ff",
+                        "tertiary": "#8ff5ff",
+                        "on-error": "#490013",
+                        "error-container": "#a70138",
+                        "surface-container-low": "#131317",
+                        "primary-fixed-dim": "#e451f9",
+                        "surface": "#0e0e12"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #050508; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 10px rgba(243, 130, 255, 0.5), 0 0 20px rgba(243, 130, 255, 0.3);
+        }
+        .glass-panel {
+            background: rgba(25, 25, 30, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .wireframe-bg {
+            background-image: linear-gradient(to right, rgba(72, 71, 76, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(72, 71, 76, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            perspective: 1000px;
+            transform: rotateX(60deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Background Layer -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+<div class="wireframe-bg"></div>
+</div>
+
+<div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 fixed inset-y-0 left-0 bg-[#050508]/90 backdrop-blur-xl border-r border-outline-variant/10 z-50 flex flex-col items-center py-10 overflow-y-auto shadow-[5px_0_30px_rgba(217,70,239,0.05)]">
+        <h1 class="font-['Space_Grotesk'] tracking-widest uppercase text-3xl font-bold text-[#d946ef] drop-shadow-[0_0_8px_rgba(217,70,239,0.5)] mb-12">AURORA</h1>
+        <nav class="flex flex-col gap-4 w-full px-6">
+            <a href="index.html" class="flex items-center gap-4 text-on-surface bg-primary/10 rounded-xl p-4 shadow-[0_0_15px_rgba(217,70,239,0.15)] group transition-all border border-[#d946ef]/20">
+                <span class="material-symbols-outlined text-[#d946ef] group-hover:scale-110 transition-transform">home</span>
+                <span class="font-bold tracking-widest uppercase text-sm">Dashboard</span>
+            </a>
+            <a href="analytics.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-tertiary group-hover:scale-110 transition-all">insights</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Analytics</span>
+            </a>
+            <a href="add_expense.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-primary/20 rounded-xl p-4 group transition-all border border-transparent hover:border-[#d946ef]/30 hover:shadow-[0_0_15px_rgba(217,70,239,0.15)]">
+                <span class="material-symbols-outlined text-[#d946ef] group-hover:scale-110 transition-transform">add_circle</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Add Expense</span>
+            </a>
+            <a href="wallet.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-secondary group-hover:scale-110 transition-all">account_balance_wallet</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Wallet</span>
+            </a>
+            <a href="profile.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-secondary group-hover:scale-110 transition-all">person</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Profile</span>
+            </a>
+        </nav>
+        <div class="mt-auto w-full px-6 space-y-2">
+            <a href="settings.html" class="w-full flex justify-center items-center gap-2 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:rotate-45 transition-transform duration-300">settings</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Settings</span>
+            </a>
+            <button id="logout-btn" class="w-full flex justify-center items-center gap-2 text-error-dim hover:text-error hover:bg-error/10 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform duration-300">logout</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main View Panel -->
+    <div class="flex-1 ml-64 flex flex-col relative z-10 w-full scroll-smooth">
+        <!-- TopAppBar -->
+        <header class="w-full bg-[#050508]/80 backdrop-blur-xl border-b border-[#d946ef]/10 flex justify-between items-center px-10 py-6 sticky top-0 z-40">
+            <div>
+                <h2 id="welcome-name" class="font-headline text-2xl text-on-surface font-semibold tracking-tighter">Welcome back, User</h2>
+                <div id="campus-display" class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1 cursor-pointer hover:text-primary transition-colors flex items-center gap-2 group">
+                    <span class="material-symbols-outlined text-[14px]">school</span>
+                    <span id="campus-text">Mumbai University</span> 
+                    <span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">edit</span>
+                </div>
+            </div>
+            <div class="relative">
+                <button id="notification-btn" class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 hover:bg-surface-bright transition-all focus:ring-2 focus:ring-primary">
+                    <span class="material-symbols-outlined text-primary relative">
+                        notifications
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-[#d946ef] rounded-full animate-ping"></span>
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-[#d946ef] rounded-full"></span>
+                    </span>
+                </button>
+                <div id="notification-dropdown" class="hidden absolute top-16 right-0 w-80 bg-surface-container border border-outline-variant/20 rounded-2xl shadow-[0_0_30px_rgba(243,130,255,0.15)] p-4 z-50">
+                    <h4 class="font-headline text-sm uppercase tracking-widest text-on-surface mb-3 border-b border-outline-variant/10 pb-2 flex justify-between items-center">
+                        Notifications
+                        <button id="clear-notifications-btn" class="text-[10px] text-zinc-500 hover:text-primary">CLEAR ALL</button>
+                    </h4>
+                    <div id="notification-list" class="space-y-3 max-h-64 overflow-y-auto hide-scrollbar">
+                        <!-- Notifications populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="p-10 max-w-7xl mx-auto w-full space-y-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Left/Main Column -->
+                <div class="lg:col-span-2 space-y-10">
+                    <!-- Hero Card: Days Until Broke -->
+                    <section class="relative group">
+                        <div class="glass-panel rounded-2xl p-10 border border-outline-variant/20 shadow-[0_0_40px_rgba(243,130,255,0.05)] overflow-hidden hover:border-primary/40 transition-colors duration-500 hover:shadow-[0_0_60px_rgba(243,130,255,0.1)]">
+                            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                                <div class="space-y-4 text-center md:text-left flex-1">
+                                    <p class="font-label text-xs tracking-[0.3em] uppercase text-on-surface-variant font-medium">Run Rate Projection</p>
+                                    <h2 class="font-headline text-3xl font-light text-on-surface">Days Until Broke</h2>
+                                    <div id="days-until-broke" class="font-headline text-[7rem] leading-none font-bold text-primary neon-glow-primary tracking-tighter group-hover:scale-105 transition-transform origin-left">...</div>
+                                </div>
+                                <!-- Radar/Progress Ring -->
+                                <div class="relative w-56 h-56 flex items-center justify-center shrink-0">
+                                    <svg class="w-full h-full transform -rotate-90">
+                                        <circle class="text-outline-variant/20" cx="112" cy="112" fill="transparent" r="100" stroke="currentColor" stroke-width="3"></circle>
+                                        <circle id="hero-ring-progress" class="text-primary drop-shadow-[0_0_12px_rgba(243,130,255,0.6)] transition-all duration-1000 ease-out" cx="112" cy="112" fill="transparent" r="100" stroke="currentColor" stroke-dasharray="628.3" stroke-dashoffset="157.07" stroke-width="8" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                        <span id="hero-ring-percent" class="font-headline text-3xl text-on-surface font-bold">...</span>
+                                        <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant mt-1">Used</span>
+                                    </div>
+                                    <!-- Decorative radar scan line -->
+                                    <div class="absolute inset-0 border-2 border-tertiary/20 rounded-full animate-ping opacity-50"></div>
+                                </div>
+                            </div>
+                            <!-- Bottom data bar in Hero -->
+                            <div class="mt-10 pt-8 border-t border-outline-variant/10 flex justify-between">
+                                <div>
+                                    <p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Remaining</p>
+                                    <p id="remaining-amount" class="font-headline text-2xl text-tertiary font-medium">...</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Monthly Budget</p>
+                                    <p id="monthly-budget" class="font-headline text-2xl text-on-surface font-medium">...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Stat Grid -->
+                    <section class="grid grid-cols-2 gap-6">
+                        <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 flex flex-col justify-between group hover:border-primary/40 hover:-translate-y-1 transition-all hover:bg-surface-container duration-300 shadow-lg">
+                            <div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(243,130,255,0.3)] transition-all">
+                                <span class="material-symbols-outlined text-3xl">analytics</span>
+                            </div>
+                            <div>
+                                <p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-2">Daily Average</p>
+                                <p id="daily-average" class="font-headline text-4xl font-semibold text-on-surface group-hover:text-primary transition-colors">...</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 flex flex-col justify-between group hover:border-tertiary/40 hover:-translate-y-1 transition-all hover:bg-surface-container duration-300 shadow-lg">
+                            <div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(143,245,255,0.3)] transition-all">
+                                <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+                            </div>
+                            <div>
+                                <p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-2">Streak</p>
+                                <p id="streak-count" class="font-headline text-4xl font-semibold text-on-surface group-hover:text-tertiary transition-colors">...</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column (Timeline & Map) -->
+                <div class="space-y-10">
+                    <!-- Recent Expenses -->
+                    <section class="glass-panel p-8 rounded-2xl border border-outline-variant/10">
+                        <div class="flex justify-between items-end mb-8">
+                            <h3 class="font-headline text-2xl font-medium text-on-surface tracking-tight">Timeline</h3>
+                            <button id="see-archive-btn" class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold hover:text-tertiary transition-colors">See Archive</button>
+                        </div>
+                        <div id="timeline-list" class="space-y-4">
+                            <!-- Expenses will be populated here by JS -->
+                        </div>
+                    </section>
+
+                    <!-- Decorative Map Section -->
+                    <section class="rounded-2xl overflow-hidden h-64 relative border border-outline-variant/20 hover:border-primary/30 transition-colors group">
+                        <img alt="abstract neon lines on dark background" class="w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgCXpcsjDAsF02bJdZwvs5c7ac_Z1zT7NDi0hBGA1UQkU1xjX9KTaCJG75sGy7h222AuLTQ0vRv5HGQwuf4UQNZDiNuf2ojmvvduUc_I6U2qbbAlPOB9bH0pWAL7xPsEvX5lN5wSDj4jKCVDy3R_yVJTvOyOUJQqmiA7fZBce2zaM6-4sF_2tBKJWdyXKWNuVCRbYLOIKBUzw-iblCJ6E1Uful63HGhkmS0_03P-MCX8tK8y97eGPzXFPbyogZHyS_I6Z_628odTY"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between p-4 bg-surface-container/60 backdrop-blur-md rounded-xl border border-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary group-hover:animate-bounce">location_on</span>
+                                <div>
+                                    <p class="font-label text-xs uppercase tracking-widest text-on-surface">Campus Set</p>
+                                    <p id="map-campus-text" class="text-[10px] text-zinc-400">Mumbai University</p>
+                                </div>
+                            </div>
+                            <button id="map-edit-btn" class="bg-primary/20 text-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-wider hover:bg-primary hover:text-black transition-colors">Edit</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script type="module" src="/src/dashboard.js"></script>
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aurora - Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#19191e",
+                        "tertiary-container": "#00eefc",
+                        "primary-fixed": "#ed69ff",
+                        "error-dim": "#d73357",
+                        "on-primary": "#540061",
+                        "tertiary-fixed": "#00eefc",
+                        "outline": "#76757a",
+                        "secondary": "#ac89ff",
+                        "on-surface": "#f3eff6",
+                        "on-tertiary-fixed-variant": "#005e64",
+                        "on-background": "#f3eff6",
+                        "primary": "#f382ff",
+                        "on-primary-fixed-variant": "#51005d",
+                        "on-surface-variant": "#acaab0",
+                        "outline-variant": "#48474c",
+                        "inverse-on-surface": "#555459",
+                        "surface-dim": "#0e0e12",
+                        "on-tertiary-fixed": "#003f43",
+                        "surface-container-lowest": "#000000",
+                        "background": "#0e0e12",
+                        "surface-container-high": "#1f1f25",
+                        "on-error-container": "#ffb2b9",
+                        "on-secondary-container": "#f8f1ff",
+                        "inverse-primary": "#a300bb",
+                        "tertiary-dim": "#00deec",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed": "#41009a",
+                        "primary-dim": "#ec63ff",
+                        "secondary-dim": "#874cff",
+                        "secondary-container": "#7000ff",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "surface-bright": "#2c2b32",
+                        "on-tertiary-container": "#005359",
+                        "surface-variant": "#25252b",
+                        "on-primary-container": "#41004c",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "surface-container-highest": "#25252b",
+                        "on-secondary": "#290067",
+                        "primary-container": "#ed69ff",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary": "#005d63",
+                        "inverse-surface": "#fcf8fe",
+                        "secondary-fixed": "#dac9ff",
+                        "tertiary-fixed-dim": "#00deec",
+                        "surface-tint": "#f382ff",
+                        "tertiary": "#8ff5ff",
+                        "on-error": "#490013",
+                        "error-container": "#a70138",
+                        "surface-container-low": "#131317",
+                        "primary-fixed-dim": "#e451f9",
+                        "surface": "#0e0e12"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #050508; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 10px rgba(243, 130, 255, 0.5), 0 0 20px rgba(243, 130, 255, 0.3);
+        }
+        .glass-panel {
+            background: rgba(25, 25, 30, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .wireframe-bg {
+            background-image: linear-gradient(to right, rgba(72, 71, 76, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(72, 71, 76, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            perspective: 1000px;
+            transform: rotateX(60deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Background Layer -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+<div class="wireframe-bg"></div>
+</div>
+
+<div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 fixed inset-y-0 left-0 bg-[#050508]/90 backdrop-blur-xl border-r border-outline-variant/10 z-50 flex flex-col items-center py-10 shadow-[5px_0_30px_rgba(217,70,239,0.05)]">
+        <h1 class="font-['Space_Grotesk'] tracking-widest uppercase text-3xl font-bold text-[#d946ef] drop-shadow-[0_0_8px_rgba(217,70,239,0.5)] mb-12">AURORA</h1>
+        <nav class="flex flex-col gap-4 w-full px-6">
+            <a href="index.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-primary group-hover:scale-110 transition-transform">home</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Dashboard</span>
+            </a>
+            <a href="analytics.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-tertiary group-hover:scale-110 transition-all">insights</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Analytics</span>
+            </a>
+            <a href="add_expense.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-primary/20 rounded-xl p-4 group transition-all border border-transparent hover:border-[#d946ef]/30 hover:shadow-[0_0_15px_rgba(217,70,239,0.15)]">
+                <span class="material-symbols-outlined text-[#d946ef] group-hover:scale-110 transition-transform">add_circle</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Add Expense</span>
+            </a>
+            <a href="wallet.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-secondary group-hover:scale-110 transition-all">account_balance_wallet</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Wallet</span>
+            </a>
+            <a href="profile.html" class="flex items-center gap-4 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:text-secondary group-hover:scale-110 transition-all">person</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Profile</span>
+            </a>
+        </nav>
+        <div class="mt-auto w-full px-6">
+            <a href="settings.html" class="w-full flex justify-center items-center gap-2 text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl p-4 group transition-all">
+                <span class="material-symbols-outlined group-hover:rotate-45 transition-transform duration-300">settings</span>
+                <span class="font-medium tracking-widest uppercase text-sm">Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main View Panel -->
+    <div class="flex-1 ml-64 flex flex-col relative z-10 w-full scroll-smooth">
+        <!-- TopAppBar -->
+        <header class="w-full bg-[#050508]/80 backdrop-blur-xl border-b border-[#d946ef]/10 flex justify-between items-center px-10 py-6 sticky top-0 z-40">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-bright transition-colors text-on-surface-variant hover:text-primary">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </a>
+                <h2 class="font-headline text-2xl text-on-surface font-semibold tracking-tighter">Archive</h2>
+            </div>
+        </header>
+
+        <main class="p-10 max-w-4xl mx-auto w-full space-y-10">
+            <section class="glass-panel p-8 rounded-2xl border border-outline-variant/10">
+                <h3 class="font-headline text-2xl font-medium text-on-surface tracking-tight mb-8">All Payments</h3>
+                
+                <div id="archive-list" class="space-y-8">
+                    <!-- Months populated by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script type="module" src="/src/archive.js"></script>
+</body></html>
